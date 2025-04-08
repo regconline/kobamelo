@@ -3,7 +3,7 @@ description: Empowering Minds, Enriching Futures
 baseurl: ""
 url: ""
 markdown: kramdown
-theme: jekyll-tailwind
+theme: 
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
