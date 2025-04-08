@@ -59,6 +59,19 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
+             
+       - uses: actions/setup-node@v3
+           with:
+             node-version: '18'
+             
+         - name: Install Tailwind
+           run: |
+             npm install -D tailwindcss postcss autoprefixer
+             npx tailwindcss init
+             
+         - name: Build site
+           run: bundle exec jekyll build
+
   # Deployment job
   deploy:
     environment:
