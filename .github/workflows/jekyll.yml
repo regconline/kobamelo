@@ -2,6 +2,13 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
+steps:
+   - uses: actions/checkout@v4
+   - uses: ruby/setup-ruby@v1
+     with:
+       ruby-version: '3.1' # Match your Gemfile
+       bundler-cache: true
+
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
